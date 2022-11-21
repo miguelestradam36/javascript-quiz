@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    
+    <title>score</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 id="finalScore">0</h1>
+            <form>
+                <h2 id="end-text">Enter your name</h2>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="scoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            <a href="play.html" class="btn">Play Again</a>
+            <a href="index.html" class="btn">Go Home</a>
+        </div>
+    </div>
+    <script src="scripts/score.js"></script>
+</body>
+</html>
