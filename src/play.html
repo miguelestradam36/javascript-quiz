@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>play</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<head>
+		<title>play</title>
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-</head>
-<body>
-	<div class="ques_container">
-		<div class="allques">
-		<div class="info">
-		<div class="textques">
-			<p id='progressText'>Question</p>
-			<div id="progressBar">
-				<div id="progressBarFull"></div>
-			</div>
-		</div>
+	</head>
+	<body>
+		<div class="ques_container">
+			<div class="allques">
+				<div class="info">
+					<div class="textques">
+						<p id='progressText'>Question</p>
+						<div id="progressBar">
+							<div id="progressBarFull"></div>
+						</div>
+					</div>
 
-		<div class="textscore">
-			<p >Score</p>
-			<h2 id='scorenumber'>0</h2>
+					<div class="textscore">
+						<p >Score</p>
+						<h2 id='scorenumber'>0</h2>
+					</div>
+				</div>
+				<div class="questions" >
+					<div><h3 id='QuestionText'></h3></div>
+					<div class="choices">
+						<div >
+							<p class='ChoiceText' data-number="1"></p>
+						</div>
+						<div>
+							<p class='ChoiceText' data-number="2" ></p>
+						</div>
+						<div>
+							<p class='ChoiceText' data-number="3"></p>
+						</div>
+						<div>
+							<p class='ChoiceText' data-number="4"></p>
+						</div>
+						<div>
+							<p class='ChoiceText' data-number="5"></p>
+						</div>
+						<div>
+							<p class='ChoiceText' data-number="6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		</div>
-		<div class="questions" >
-			<div><h3 id='QuestionText'>What is the Question?</h3></div>
-			<div class="choices">
-			<div >
-				<p class='ChoiceText' data-number="1">num1</p>
-			</div>
-			<div>
-				<p class='ChoiceText' data-number="2" >num2</p>
-			</div>
-			<div>
-				<p class='ChoiceText' data-number="3">num3</p>
-			</div>
-			<div>
-				<p class='ChoiceText' data-number="4">num4</p>
-			</div>
-			<div>
-				<p class='ChoiceText' data-number="5">num5</p>
-			</div>
-			<div>
-				<p class='ChoiceText' data-number="6">num6</p>
-			</div>
-			</div>
-		</div>
-		</div>
-		</div>
-</div>
-<script type="text/javascript" src="scripts/play.js"></script>
-</body>
+	</div>
+	<script type="text/javascript" src="scripts/play.js"></script>
+	</body>
 </html>
