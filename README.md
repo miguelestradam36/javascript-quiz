@@ -9,3 +9,7 @@ Project built with the help of **Vanilla Javascript**
 ## About the project :book:
 
 Learn more about the project on its [documentation](docs/README.md)
+
+## Reference
+
+- [Javascript Questions Database](https://www.sanfoundry.com/1000-javascript-questions-answers/)
