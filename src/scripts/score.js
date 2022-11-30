@@ -23,7 +23,7 @@ saveHighScore = e => {
   highScores.push(score)
 
     highScores.reverse()
-    highScores.splice(4)
+    highScores.splice(10)
     localStorage.setItem('highScores', JSON.stringify(highScores))
     console.log(highScores)
     window.location.assign('achievers.html')
