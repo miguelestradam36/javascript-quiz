@@ -9,41 +9,65 @@
 
 	</head>
 	<body>
-		<div class="ques_container">
-			<div class="allques">
-				<div class="info">
-					<div class="textques">
-						<p id='progressText'>Question</p>
-						<div id="progressBar">
-							<div id="progressBarFull"></div>
+		<header class="p-1">
+			<nav class="navbar navbar-light bg-light">
+				<div class="navbar-brand">
+					<img src="assets/img/jsicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+					Javascript Quiz
+				</a>
+			</nav>
+		</header>
+		<main>
+			<div class="card">
+				<div class="ques_container">
+					<div class="allques">
+						<div class="card-header">
+							<div class="info">
+								<div class="container">
+									<div class="row">
+										<div class="textques">
+											<div class="row p-1">
+												<p class="fw-bold" id='progressText'>Question</p>
+											</div>
+											
+											<div class="col-md-12" id="progressBar">
+												<div id="progressBarFull"></div>
+											</div>
+										</div>
+									</div>
+				
+									<div class="textscore">
+										<p >Score</p>
+										<h2 id='scorenumber'>0</h2>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-
-					<div class="textscore">
-						<p >Score</p>
-						<h2 id='scorenumber'>0</h2>
-					</div>
-				</div>
-				<div class="questions" >
-					<div><h3 id='QuestionText'></h3></div>
-					<div class="choices">
-						<div >
-							<p class='ChoiceText' data-number="1"></p>
-						</div>
-						<div>
-							<p class='ChoiceText' data-number="2" ></p>
-						</div>
-						<div>
-							<p class='ChoiceText' data-number="3"></p>
-						</div>
-						<div>
-							<p class='ChoiceText' data-number="4"></p>
+						<div class="card-body">
+							<div class="questions" >
+								<div class="row form-group p-1">
+									<h3 class="text-primary fw-bold" id='QuestionText'></h3>
+								</div>
+								<div class="choices">
+									<div class="form-group">
+										<p class='ChoiceText' data-number="1"></p>
+									</div>
+									<div class="form-group">
+										<p class='ChoiceText' data-number="2" ></p>
+									</div>
+									<div class="form-group">
+										<p class='ChoiceText' data-number="3"></p>
+									</div>
+									<div class="form-group">
+										<p class='ChoiceText' data-number="4"></p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</main>
 	<script type="text/javascript" src="scripts/play.js"></script>
 	</body>
 </html>

@@ -80,8 +80,8 @@ const choices = Array.from(document.querySelectorAll('.ChoiceText'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#scorenumber');
 const progressBarFull = document.querySelector('#progressBarFull');
-const SCORE_POINTS = 10
-const MAX_QUESTIONS = 10
+const SCORE_POINTS = 5
+const MAX_QUESTIONS = 20
 GetStareted = () => {
 	questionCounter = 0
     score = 0

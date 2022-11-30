@@ -8,18 +8,28 @@
 
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1 id="finalScore"></h1>
-            <form>
-                <h2 id="end-text">Enter your name</h2>
-                <input type="text" name="name" id="username" placeholder="Enter your name">
-                <button class="btn" id="scoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
-            </form>
-            <a href="play.html" class="btn">Play Again</a>
-            <a href="index.html" class="btn">Go Home</a>
+    <header class="p-1">
+        <nav class="navbar navbar-light bg-light">
+            <div class="navbar-brand">
+                <img src="assets/img/jsicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Javascript Quiz
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1 id="finalScore"></h1>
+                <form>
+                    <h2 id="end-text">Enter your name</h2>
+                    <input type="text" name="name" id="username" placeholder="Enter your name">
+                    <button class="btn" id="scoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+                </form>
+                <a href="play.html" class="btn">Play Again</a>
+                <a href="index.html" class="btn">Go Home</a>
+            </div>
         </div>
-    </div>
+    </main>
     <script src="scripts/score.js"></script>
 </body>
 </html>
