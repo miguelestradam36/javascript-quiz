@@ -1,3 +1,6 @@
+/*
+Questions displayed on Javascript Quiz
+*/
 let questions = [
 {question: 'What is JavaScript?',
 choice1: 'JavaScript is a scripting language used to make the website interactive',
@@ -140,26 +143,44 @@ choice4: 'Literal',
 answer: 3,
 }
 ]
-let currentQuestion = {}
+/*
+Mutable variables
+*/
+let currentQuestion = {} //Displayed question
 let TrueAnswers = true 
 let score = 0
 let questionCounter = 0 
 let availableQuestions = [] 
-const question = document.querySelector('#QuestionText');
+/*
+Constant Variables
+---
+HTML select tags with the following classes or ids
+*/
+const question = document.querySelector('#QuestionText'); 
 const choices = Array.from(document.querySelectorAll('.ChoiceText'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#scorenumber');
 const progressBarFull = document.querySelector('#progressBarFull');
-const SCORE_POINTS = 5
-const MAX_QUESTIONS = 20
+/*
+Contant Variables = No Mutable
+Variables responsable of Calculating the whole quiz grade
+*/
+const SCORE_POINTS = 5 // 100 / 20
+const MAX_QUESTIONS = 20 // 100 / 5
+/*
+Function Responsable of starting Quiz in a recursive manner
+*/
 GetStareted = () => {
 	questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 }
-
-
+/*
+Flag function
+---
+If no available questions, redirects top score.html
+*/
 getNewQuestion = () => {
 	 if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -167,26 +188,39 @@ getNewQuestion = () => {
         return window.location.assign('score.html')
 }
 questionCounter++
-progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+/*
+ProgressBar and Title related Javascript/HTML
+*/
+progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}` // Flags in HTML tags the given variables
+progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` // Calculate progress bar width for visual representation
 const questionsRandNumber = Math.floor(Math.random() * availableQuestions.length)
-currentQuestion = availableQuestions[questionsRandNumber]
-question.innerText = currentQuestion.question
+/*
+Test
+---
+Questions HTML display data GET
+*/
+currentQuestion = availableQuestions[questionsRandNumber] // get current question
+question.innerText = currentQuestion.question // Modify questions - HTML p tags
 choices.forEach(choice => {
-    const number = choice.dataset['number']
+    const number = choice.dataset['number'] // data obtained from HTML
 	 choice.innerText = currentQuestion['choice' + number]
     })
 availableQuestions.splice(questionsRandNumber, 1)
 
   TrueAnswers = true
 }
+/*
+Logic for right and wrong questions
+---
+Test / Quiz Logic
+*/
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
 		if(!TrueAnswers) return
 			TrueAnswers = false
 		const selectedChoice = e.target
-		const selectedAnswer = selectedChoice.dataset['number']
-		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+		const selectedAnswer = selectedChoice.dataset['number'] // data obtained from HTML
+		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // define wether answer is corret or incorrect
         if(classToApply === 'correct') {
 			incrementScore(SCORE_POINTS)
         }
@@ -197,12 +231,14 @@ choices.forEach(choice => {
         }, 1000)
     })
 })
-
+/*
+Increment score per question
+*/
 incrementScore = number  => {
 	score +=number
  scoreText.innerText = score
 }
-GetStareted()
+GetStareted() // Call of previously programmed function
 
 
 
