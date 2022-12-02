@@ -6,6 +6,9 @@ Project built with the help of **Vanilla Javascript**
 
 ![Javascript](docs/img/javascript.webp)
 
+
+See project at [Javascript Quiz](http://javascript-quiz.infinityfreeapp.com/?i=1)
+
 ## About the project :book:
 
 Learn more about the project on its [documentation](docs/README.md)
