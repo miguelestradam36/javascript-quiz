@@ -1,6 +1,3 @@
-/*
-Questions displayed on Javascript Quiz
-*/
 let questions = [
 {question: 'What is JavaScript?',
 choice1: 'JavaScript is a scripting language used to make the website interactive',

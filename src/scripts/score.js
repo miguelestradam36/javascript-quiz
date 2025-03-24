@@ -9,7 +9,7 @@ const username = document.querySelector('#username')
 const scoreBtn = document.querySelector('#scoreBtn')
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [] // JSON data
 
-finalScore.innerText = mostRecentScore // Set HTML tag inner text
+finalScore.innerHTML = mostRecentScore // Set HTML tag inner text
 console.log(finalScore.innerText) // Log data into javascript console
 username.addEventListener('keyup', () => {
     scoreBtn.disabled = !username.value // disable keys
